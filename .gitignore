@@ -1,0 +1,34 @@
+# Build Artifacts
+
+.gradle/
+build/
+target/
+bin/
+classes/
+dependency-reduced-pom.xml
+
+# IntelliJ IDEA Files
+
+*.iml
+*.ipr
+*.iws
+*.idea
+
+# Eclipse Project Files
+
+.classpath
+.project
+.settings/
+
+# Operating System Files
+
+*.DS_Store
+Thumbs.db
+*.sw?
+.#*
+*#
+*~
+*.sublime-*
+
+Gemfile.lock
+archive.tar.gz
