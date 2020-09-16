@@ -32,5 +32,6 @@ eureka:
 logging:
   level:
     org:
+#      springframework: debug
       hibernate:
         SQL: debug

@@ -1,11 +1,11 @@
 package ua.kiev.prog.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient("spring-cloud-eureka-client") // Имя используемое для балансировщика ribbon
+@FeignClient(name="CONTACT-VALIDATOR-SERVICE") // Имя используемое для балансировщика ribbon
 public interface ValidationClient {
-    @RequestMapping(value = "/contact/validate", method = RequestMethod.GET)
-    String validate(String phoneNumber);
+    @GetMapping(value = "/contact/validate")
+    String validate(@RequestParam("phoneNumber") String phoneNumber);
 }

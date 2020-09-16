@@ -114,8 +114,9 @@ public class MyController {
     }
 
     @RequestMapping(value = "/contact/validate", method = RequestMethod.GET)
-    public String validateContact(@RequestParam String phoneNumber) {
-        return validationClient.validate(phoneNumber);
+    public String validateContact(@RequestParam String phoneNumber, Model model) {
+        model.addAttribute("validate", validationClient.validate(phoneNumber));
+        return "validate";
     }
 
 
